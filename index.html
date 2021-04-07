@@ -1,1 +1,33 @@
-Hello World
+---
+title:
+call_to_action: Contact
+background_image_path:
+large_header: true
+testimonials:
+  - message: Nanjingology means home to me.
+    image: "https://placekitten.com/g/60/60?a=.png"
+    name: Lao Liu
+  - message: The culture contained in Nanjing dialect is phenomenal. By preserving the language, you preserve the culture.
+    image: "https://www.fillmurray.com/60/60?a=.png"
+    name: Tian Zheng
+  - message: It no longer feels so long since I left Nanjing.
+    image: "https://placebear.com/60/60?a=.png"
+    name: Peter Hopkins
+_options:
+  image:
+    width: 60
+    height: 60
+---
+
+<div class="editable">
+	<p>American Nanjing Society is a non-profit organization focusing on Nanjingology and all things about Nanjing culture.</p>
+</div>
+
+<div class="testimonials">
+	{% for testimonial in page.testimonials %}
+		<blockquote class="testimonial">
+			<p class="testimonial-message">{{ testimonial.message }}</p>
+			<p class="testimonial-author"><img src="{% include relative-src.html src=testimonial.image %}" alt="Photo of {{ testimonial.name }}"> {{ testimonial.name }}</p>
+		</blockquote>
+	{% endfor %}
+</div>
