@@ -9,10 +9,16 @@ navigation_order: 1
 
 <div class="editable">
 	<p>
-		American Nanjing Society is devoted in promoting and preserving Nanjing culture. While Nanjingology is the focus of this society, our mission is to perserve Nanjing memory.
+		Mission 使命: To explore and promote Nanjing culture 探索与传播南京文化
+	</p>
+	<p>
+		Vision 愿景: To enhance awareness of Nanjing cultural heritage and to inspire people-to-people interactions 提升南京文化传承意识，促进民间交流
+	</p>
+	<p>
+		Values 价值观: creative, immersive, comprehensive 创新、浸濡、包罗万象
 	</p>
 
-	<p>Meet the members of our Society:</p>
+	<p>Meet the advisors of our Society:</p>
 </div>
 
 <p class="editor-link"><a href="cloudcannon:collections/_staff_members" class="btn"><strong>&#9998;</strong> Update Staff Members</a></p>
@@ -27,7 +33,7 @@ navigation_order: 1
 				<ul class="staff-info">
 					<li>{{ member.name }}</li>
 					<li><small>{{ member.credentials }}</small></li>
-					<li><a href="tel:{{ site.data.company.contact_phone_number }}">{{ site.data.company.contact_phone_number }}</a>  ext {{ member.phone_extension }}</li>
+					<li><a href="tel:{{ site.data.company.contact_phone_number }}">{{ site.data.company.contact_phone_number }}</a>  {{ include.member.cn_name }} title: {{ include.member.title }}</li>
 				</ul>
 			</div>
 
